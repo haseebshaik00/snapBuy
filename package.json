@@ -1,0 +1,29 @@
+{
+  "name": "snapbuy",
+  "version": "1.0.0",
+  "description": "e-commerce web app",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node ./src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haseebshaik00/snapBuy.git"
+  },
+  "author": "Shaik Haseeb Ur Rahman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/haseebshaik00/snapBuy/issues"
+  },
+  "homepage": "https://github.com/haseebshaik00/snapBuy#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "hbs": "^4.2.0",
+    "mysql2": "^3.12.0",
+    "sequelize": "^6.37.5"
+  }
+}
