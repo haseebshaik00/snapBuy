@@ -56,5 +56,40 @@ app.use("/public", express.static(__dirname + "../public"));
 
 app.listen('4444', () => console.log("Server started on http://localhost:4444"));
 ```
+[OR]
+```bash
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { json, urlencoded, static as serveStatic } from 'express';
+import router from './routes/index.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const PORT = 4444;
+const app = express();
+
+app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, 'public', 'views'));
+
+app.use(json());
+app.use(urlencoded({ extended: true }));
+app.use("/xyz", serveStatic(path.join(__dirname, 'public')));
+app.use('/api', router); 
+
+app.listen(PORT, () => console.log(`Server started on http://localhost:${PORT}`));
+```
+
+## Setup Model
+Define all your tables
 
 ## config>dbConfig.js setup
+Connect and Setup DB using your tables from model
+
+## Routes
+- index.js
+- define different routes
+- connect all the routes to index.js
+
+## Controllers
