@@ -17,6 +17,6 @@ db.sync()
   .then(() => console.log("Databse Synced!"))
   .catch(() => console.log("Databse Not Synced!"));
 
-export default {
+export {
     db, User, Product
 };
