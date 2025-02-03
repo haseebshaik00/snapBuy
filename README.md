@@ -93,3 +93,10 @@ Connect and Setup DB using your tables from model
 - connect all the routes to index.js
 
 ## Controllers
+- define controller logic
+- map all controller functions (CRUD operations) back to the routes
+- expose all endpoints
+
+## Server Setup
+- check if server is up
+- check you can trigger all endpoints through POSTMAN
